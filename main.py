@@ -28,4 +28,29 @@ def Line():
     plt.legend()
     plt.show()
 
+def Column():
+    new = df.to_numpy()
+    print(new[0][1:5])
+
+    X = new[0][1:5]
+
+    art = new[1][1:5]
+    mgt = new[2][1:5]
+    med = new[3][1:5]
+    sci = new[4][1:5]
+
+    X_axis = np.arange(len(X))
+
+    plt.bar(X_axis - 0.1, art, 0.2, label='ART')
+    plt.bar(X_axis + 0.1, mgt, 0.2, label='Management')
+    plt.bar(X_axis + 0.3, med, 0.2, label='Medicine')
+    plt.bar(X_axis + 0.5, sci, 0.2, label='Science')
+
+    plt.xticks(X_axis, X)
+    plt.xlabel("Year")
+    plt.ylabel("Number of Students")
+    plt.legend()
+    plt.show()
+
+
 
