@@ -96,7 +96,7 @@ entry = tk.Entry()
 btn1.pack(pady=8)
 btn2.pack(pady=8)
 btn3.pack(pady=8)
-btn4.pack(pady=8)
+btn4.pack(pady=10)
 entry.pack()
 
 root.mainloop()
