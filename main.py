@@ -82,5 +82,17 @@ def Pie():
 
     plt.show()
 
+def Total():
+    entry.delete(0, tk.END)
+    new = df.to_numpy()
+    new = new[1:]
+    sum = 0
+    # for loop for 2D array
+    for i in range(len(new)):
+        sum = sum + new[i][6]
+
+    print(sum)
+    entry.insert(0,sum)
+
 
 
