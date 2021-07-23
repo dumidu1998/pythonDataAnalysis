@@ -94,5 +94,19 @@ def Total():
     print(sum)
     entry.insert(0,sum)
 
+root = tk.Tk()
+root.geometry("500x500")
+btn1 = tk.Button(root, text="Column Chart",command=Column,width=12,height=5)
+btn2 = tk.Button(root, text="Line Chart",command=Line,width=12,height=5)
+btn3 = tk.Button(root, text="PieChart",command=Pie,width=12,height=5)
+btn4 = tk.Button(root, text="Total 2020",command=Total,width=12,height=5)
+entry = tk.Entry()
 
+btn1.pack(pady=8)
+btn2.pack(pady=8)
+btn3.pack(pady=8)
+btn4.pack(pady=8)
+entry.pack()
+
+root.mainloop()
 
