@@ -55,8 +55,6 @@ def Column():
 
 def Pie():
     new = df.to_numpy()
-    print(new[0][1:5])
-    # print(new)
 
     X = new[0][1:5]
 
@@ -91,7 +89,6 @@ def Total():
     for i in range(len(new)):
         sum = sum + new[i][6]
 
-    print(sum)
     entry.insert(0,sum)
 
 root = tk.Tk()
