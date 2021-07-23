@@ -3,22 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tkinter as tk
 
-
-
+#Read from xls 
 df = pd.read_excel ('data.xls')
 
 def Line():
+    #xls data to array
     new = df.to_numpy()
 
-    X = new[0][1:5]
     art = new[1][1:]
     mgt = new[2][1:]
     med = new[3][1:]
     sci = new[4][1:]
 
-    X_axis = np.arange(len(X))
     x = new[0][1:7]
-    y = [3, 3, 3, 3, 3, 3]
 
     # plot lines
     plt.plot(x, art, label="Art", linestyle="-")
@@ -30,7 +27,6 @@ def Line():
 
 def Column():
     new = df.to_numpy()
-    print(new[0][1:5])
 
     X = new[0][1:5]
 
@@ -56,14 +52,12 @@ def Column():
 def Pie():
     new = df.to_numpy()
 
-    X = new[0][1:5]
 
     art = new[1][6]
     mgt = new[2][6]
     med = new[3][6]
     sci = new[4][6]
 
-    X_axis = np.arange(len(X))
 
     activities = ['Art', 'Management', 'Medical', 'Science']
 
@@ -106,4 +100,3 @@ btn4.pack(pady=8)
 entry.pack()
 
 root.mainloop()
-
