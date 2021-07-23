@@ -53,4 +53,34 @@ def Column():
     plt.show()
 
 
+def Pie():
+    new = df.to_numpy()
+    print(new[0][1:5])
+    # print(new)
+
+    X = new[0][1:5]
+
+    art = new[1][6]
+    mgt = new[2][6]
+    med = new[3][6]
+    sci = new[4][6]
+
+    X_axis = np.arange(len(X))
+
+    activities = ['Art', 'Management', 'Medical', 'Science']
+
+    # portion covered by each label
+    slices = [art, mgt, med, sci]
+
+    # color for each label
+    colors = ['r', 'y', 'g', 'b']
+
+    # plotting the pie chart
+    plt.pie(slices, labels=activities, colors=colors,
+            startangle=90, shadow=True, explode=(0, 0, 0.1, 0),
+            radius=1.2, autopct='%1.1f%%')
+
+    plt.show()
+
+
 
